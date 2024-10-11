@@ -44,7 +44,15 @@ const DecodePageRoute = ({ children }) => {
     }
   }
 
-  return <PageWrap> {children} </PageWrap>;
+    return <PageWrap>
+        <div className="body-content">    
+            <main id="main-lms">
+                <div className="lms-page navigator-collapsed">
+                    {children}
+                </div>
+            </main>
+        </div>
+    </PageWrap>;
 };
 
 DecodePageRoute.propTypes = {

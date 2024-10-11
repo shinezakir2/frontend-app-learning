@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import PropTypes from 'prop-types';
 import { injectIntl, intlShape } from '@edx/frontend-platform/i18n';
 import classNames from 'classnames';
@@ -15,30 +15,24 @@ const CourseTabsNavigation = ({
 
   return (
     <div id="courseTabsNavigation" className={classNames('course-tabs-navigation', className)}>
-      <div className="container-xl">
-        <div className="nav-bar">
-          <div className="nav-menu">
-            <Tabs
-              className="nav-underline-tabs"
-              aria-label={intl.formatMessage(messages.courseMaterial)}
-            >
-              {tabs.map(({ url, title, slug }) => (
-                <a
-                  key={slug}
-                  className={classNames('nav-item flex-shrink-0 nav-link', { active: slug === activeTabSlug })}
-                  href={url}
-                >
-                  {title}
-                </a>
-              ))}
-            </Tabs>
+          <div class="css-deriqb">
+              <h6 class="MuiTypography-root MuiTypography-h6 MuiTypography-noWrap  css-12nq7o1" aria-label="Preparing for a Job Interview">
+                  Preparing for a Job Interview
+              </h6>
           </div>
-          <div className="search-toggle">
-            <CoursewareSearchToggle />
-          </div>
-        </div>
-      </div>
-      {show && <CoursewareSearch />}
+          <hr class="MuiDivider-root MuiDivider-fullWidth css-39bbo6" />
+          {tabs.map(({ url, title, slug }) => (
+              <div class="MuiBox-root css-hpgf8j">
+                  <a className={classNames('MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation link css-17opvwr', { active: slug === activeTabSlug })} key={slug} tabindex="0" target="_self" href={url}>
+                      {title}
+                      <span class="MuiTouchRipple-root css-w0pj6f"></span>
+                  </a>
+              </div>
+          ))}
+          <hr class="MuiDivider-root MuiDivider-fullWidth css-39bbo6" />
+          <hr class="MuiDivider-root MuiDivider-fullWidth css-39bbo6" />
+
+      
     </div>
   );
 };
